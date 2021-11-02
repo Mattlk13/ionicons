@@ -2,23 +2,29 @@ import { Config } from '@stencil/core';
 
 export const config: Config = {
   namespace: 'ionicons',
+  buildEs5: 'prod',
   outputTargets: [
     {
       type: 'dist',
-      empty: false
+      empty: false,
     },
     {
-      type: 'docs-readme'
+      type: 'dist-custom-elements',
+      dir: './components',
+    },
+    {
+      type: 'docs-readme',
     },
     {
       type: 'www',
       copy: [
         {
           src: './components/test/*.svg',
-          dest: './assets/'
-        }
+          dest: './assets/',
+        },
       ],
-      empty: false
-    }
-  ]
+      empty: false,
+      serviceWorker: false,
+    },
+  ],
 };

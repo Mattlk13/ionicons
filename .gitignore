@@ -10,11 +10,13 @@ log.txt
 .idea/
 .versions/
 .vscode/
+components/
 node_modules/
 tmp/
 dist/
 icons/
 .DS_Store
 scripts/*.js
+!scripts/install-loader.js
 
 www/
